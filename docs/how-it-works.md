@@ -56,4 +56,16 @@ mise-completions-sync fzf
 #  [bash] -> ~/.local/share/mise-completions/bash/fzf
 ```
 
+Or a shell dir with base dir default (shell takes precedence):
+
+```shell
+export MISE_COMPLETIONS_SYNC_HOME="$XDG_DATA_HOME/custom-vendor-completions"
+export MISE_COMPLETIONS_SYNC_ZSH_DIR="$XDG_CONFIG_DIR/zsh/site-funtions"
+
+mise-completions-sync fzf
+#  [fish] -> ~/.local/share/custom-vendor-completions/fish/fzf.fish
+#  [zsh]  -> ~/.local/share/zsh/site-fuctions/_fzf
+#  [bash] -> ~/.local/share/custom-vendor-completions/bash/fzf
+```
+
 Note: Target directories will be created if they don't already exist.
