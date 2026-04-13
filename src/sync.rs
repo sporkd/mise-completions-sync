@@ -238,7 +238,10 @@ mod tests {
     #[test]
     fn test_get_completions_dir_zsh_env_override() {
         cleanup_env_vars();
-        std::env::set_var("MISE_COMPLETIONS_SYNC_ZSH_DIR", "/custom/zsh/site-functions");
+        std::env::set_var(
+            "MISE_COMPLETIONS_SYNC_ZSH_DIR",
+            "/custom/zsh/site-functions",
+        );
 
         let result = get_completions_dir("zsh").unwrap();
         assert_eq!(result, PathBuf::from("/custom/zsh/site-functions"));
