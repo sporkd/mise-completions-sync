@@ -76,6 +76,23 @@ postinstall = "mise-completions-sync"
 EOF
 ```
 
+## Custom Output Dirs
+
+By default, completions are synced to `$XDG_DATA_HOME/mise-completions/<shell>/`. However, you can override the output directory for each shell using one or more env vars:
+
+```shell
+# Bash completions to standard bash-completion dir
+export MISE_COMPLETIONS_SYNC_BASH_DIR="$XDG_DATA_HOME/bash-completion/completions"
+
+# ZSH completions to standard zsh site-functions dir
+export MISE_COMPLETIONS_SYNC_ZSH_DIR="$XDG_DATA_HOME/zsh/site-functions"
+
+# Fish completions to standard fish vendor_completions.d dir
+export MISE_COMPLETIONS_SYNC_FISH_DIR="$XDG_DATA_HOME/fish/vendor_completions.d"
+```
+
+Note: Target directories will be created they don't already exist.
+
 ## Documentation
 
 See the [full documentation](https://alltuner.github.io/mise-completions-sync/) for supported tools and more details.

@@ -33,3 +33,15 @@ The format pattern supports these placeholders:
 Completions are saved to `$XDG_DATA_HOME/mise-completions/<shell>/` (defaults to `~/.local/share/mise-completions/<shell>/`).
 
 Each tool gets its own completion file named `_<tool>` (for zsh) or `<tool>.bash`/`<tool>.fish` for other shells.
+
+Additionally, you can override the output directory for one or more shells by setting the `MISE_COMPLETIONS_SYNC_{SHELL}_DIR` environment variable (e.g., `MISE_COMPLETIONS_SYNC_ZSH_DIR`). This is useful if you prefer to use your shell's standard completion directories. For example, the following would sync (and clean) all zsh competions to `~/.local/share/zsh/site-functions/` instead of `$XDG_DATA_HOME/mise-completions/zsh/`
+
+```shell
+export MISE_COMPLETIONS_SYNC_ZSH_DIR="$XDG_DATA_HOME/zsh/site-functions"
+
+mise-completions-sync
+
+mise-completions-sync clean
+```
+
+Note: Target directories will be created they don't already exist.
