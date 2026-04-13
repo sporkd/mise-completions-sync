@@ -43,6 +43,10 @@ pub enum Error {
 
 /// Get the base directory for completions
 pub fn get_completions_base_dir() -> PathBuf {
+    if let Ok(home) = std::env::var("MISE_COMPLETIONS_SYNC_HOME") {
+        return PathBuf::from(home);
+    }
+
     std::env::var("XDG_DATA_HOME")
         .map(PathBuf::from)
         .unwrap_or_else(|_| {
@@ -216,6 +220,7 @@ mod tests {
     use super::*;
 
     fn cleanup_env_vars() {
+        std::env::remove_var("MISE_COMPLETIONS_SYNC_HOME");
         std::env::remove_var("MISE_COMPLETIONS_SYNC_BASH_DIR");
         std::env::remove_var("MISE_COMPLETIONS_SYNC_ZSH_DIR");
         std::env::remove_var("MISE_COMPLETIONS_SYNC_FISH_DIR");
@@ -275,6 +280,23 @@ mod tests {
 
         let fish_result = get_completions_dir("fish").unwrap();
         assert_eq!(fish_result, get_completions_base_dir().join("fish"));
+
+        cleanup_env_vars();
+    }
+
+    #[test]
+    fn test_get_completions_dir_base_env_override() {
+        cleanup_env_vars();
+        std::env::set_var("MISE_COMPLETIONS_SYNC_HOME", "/custom/base");
+
+        let bash_result = get_completions_dir("bash").unwrap();
+        assert_eq!(bash_result, PathBuf::from("/custom/base/bash"));
+
+        let zsh_result = get_completions_dir("zsh").unwrap();
+        assert_eq!(zsh_result, PathBuf::from("/custom/base/zsh"));
+
+        let fish_result = get_completions_dir("fish").unwrap();
+        assert_eq!(fish_result, PathBuf::from("/custom/base/fish"));
 
         cleanup_env_vars();
     }

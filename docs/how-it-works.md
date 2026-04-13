@@ -30,18 +30,30 @@ The format pattern supports these placeholders:
 
 ## Output Location
 
-Completions are saved to `$XDG_DATA_HOME/mise-completions/<shell>/` (defaults to `~/.local/share/mise-completions/<shell>/`).
+By default, completions are saved to `$XDG_DATA_HOME/mise-completions/<shell>`.
 
 Each tool gets its own completion file named `_<tool>` (for zsh) or `<tool>.bash`/`<tool>.fish` for other shells.
 
-Additionally, you can override the output directory for one or more shells by setting the `MISE_COMPLETIONS_SYNC_{SHELL}_DIR` environment variable (e.g., `MISE_COMPLETIONS_SYNC_ZSH_DIR`). This is useful if you prefer to use your shell's standard completion directories. For example, the following would sync (and clean) all zsh competions to `~/.local/share/zsh/site-functions/` instead of `$XDG_DATA_HOME/mise-completions/zsh/`
+You can override the default output directory using the `MISE_COMPLETIONS_SYNC_HOME` environment variable:
 
 ```shell
-export MISE_COMPLETIONS_SYNC_ZSH_DIR="$XDG_DATA_HOME/zsh/site-functions"
+export MISE_COMPLETIONS_SYNC_HOME="$XDG_DATA_HOME/custom-vendor-completions"
 
-mise-completions-sync
-
-mise-completions-sync clean
+mise-completions-sync fzf
+#  [fish] -> ~/.local/share/custom-vendor-completions/fish/fzf.fish
+#  [zsh]  -> ~/.local/share/custom-vendor-completions/zsh/_fzf
+#  [bash] -> ~/.local/share/custom-vendor-completions/bash/fzf
 ```
 
-Note: Target directories will be created they don't already exist.
+Or you can override output directories for one (or more) shells (e.g., `MISE_COMPLETIONS_SYNC_{SHELL}_DIR`)
+
+```shell
+export MISE_COMPLETIONS_SYNC_FISH_DIR="$HOME/fish/completions"
+
+mise-completions-sync fzf
+#  [fish] -> ~/fish/completions/fzf.fish
+#  [zsh]  -> ~/.local/share/mise-completions/zsh/_fzf
+#  [bash] -> ~/.local/share/mise-completions/bash/fzf
+```
+
+Note: Target directories will be created if they don't already exist.
