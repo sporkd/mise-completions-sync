@@ -3,7 +3,7 @@ name: Release Please
 on:
   push:
     branches:
-      - main
+      - develop
 
 permissions:
   contents: write
@@ -20,6 +20,7 @@ jobs:
         id: release
         with:
           release-type: rust
+          target-branch: develop
 
   build-binaries:
     needs: release-please
