@@ -3,3 +3,4 @@ Cargo.lock
 worktrees/
 !worktrees/.placeholder
 site/
+bin/

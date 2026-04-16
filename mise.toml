@@ -4,6 +4,9 @@ rust = "latest"
 uv = "latest"
 prek = "latest"
 
+[env]
+_.path = "./bin"
+
 [tasks.build]
 run = "cargo build --release"
 description = "Build the release binary"
@@ -25,7 +28,7 @@ run = "uv run scripts/generate-registry.py"
 description = "Generate registry.toml from mise's registry"
 
 [tasks.install-dev]
-run = "cargo install --path ."
+run = "cargo install --path . --root ."
 description = "Install locally for testing"
 
 [tasks.install-hooks]
