@@ -1,5 +1,63 @@
 # Changelog
 
+## [0.5.2](https://github.com/sporkd/mise-completions-sync/compare/v0.5.1...v0.5.2) (2026-05-10)
+
+
+### Bug Fixes
+
+* bundle dependency and registry updates from recent merges ([#59](https://github.com/sporkd/mise-completions-sync/issues/59)) ([98e9409](https://github.com/sporkd/mise-completions-sync/commit/98e9409a7df5d32810ad0d41e58fb046a6926567))
+* **ci:** inline build-binaries job in release-please workflow ([099ef79](https://github.com/sporkd/mise-completions-sync/commit/099ef7914c2e4ca8ad0aa3a8203075606f7a14d2))
+* **ci:** use release-please config file for correct version bumps ([d09cbdd](https://github.com/sporkd/mise-completions-sync/commit/d09cbdde8e6a447aef0c9e2aafc2c620cc71ad73))
+* **registry:** remove mkcert (closes [#50](https://github.com/sporkd/mise-completions-sync/issues/50)) ([#61](https://github.com/sporkd/mise-completions-sync/issues/61)) ([b588589](https://github.com/sporkd/mise-completions-sync/commit/b588589f06c413028438ec9faf367879f29c223b))
+* **tests:** use Mutex for test serialization instead of --test-threads=1 ([2952746](https://github.com/sporkd/mise-completions-sync/commit/2952746430d0b3eb8e4f4421d6a1d9de85ef78a9))
+
+
+### Code Refactoring
+
+* resolve env vars at CLI entry point via CompletionsDirs struct ([6e52529](https://github.com/sporkd/mise-completions-sync/commit/6e5252985d23a703e5ed66eddaa24debc20c2a77))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/upload-pages-artifact action to v5 ([#53](https://github.com/sporkd/mise-completions-sync/issues/53)) ([1c5d7c2](https://github.com/sporkd/mise-completions-sync/commit/1c5d7c28c7a64fa23e7157a4ab9b7f56830555a6))
+* **deps:** update amannn/action-semantic-pull-request action to v6 ([#66](https://github.com/sporkd/mise-completions-sync/issues/66)) ([be5454f](https://github.com/sporkd/mise-completions-sync/commit/be5454f69cd32758b59275e990e5228b3af65c27))
+* **deps:** update astral-sh/setup-uv action to v8 ([#56](https://github.com/sporkd/mise-completions-sync/issues/56)) ([5e3256a](https://github.com/sporkd/mise-completions-sync/commit/5e3256a15876c3cda478a9a3e5fe010565309211))
+* **deps:** update googleapis/release-please-action action to v5 ([#58](https://github.com/sporkd/mise-completions-sync/issues/58)) ([6759694](https://github.com/sporkd/mise-completions-sync/commit/6759694605d7ef629e705fb3bdb6e3f76db53b18))
+* **deps:** update houseabsolute/actions-rust-cross action to v1 ([#57](https://github.com/sporkd/mise-completions-sync/issues/57)) ([39263f1](https://github.com/sporkd/mise-completions-sync/commit/39263f1178b87becb966d5aa8a50d1c2c3b20686))
+* **deps:** update rust dependencies ([#71](https://github.com/sporkd/mise-completions-sync/issues/71)) ([ba67f02](https://github.com/sporkd/mise-completions-sync/commit/ba67f02946eeb1815daa8d54e6b27d2dcd9964fe))
+* **deps:** update softprops/action-gh-release action to v3 ([#51](https://github.com/sporkd/mise-completions-sync/issues/51)) ([f0ef251](https://github.com/sporkd/mise-completions-sync/commit/f0ef251c8617592084bfe1a3366a2ebe65ded492))
+* **main:** release 0.5.1 ([#60](https://github.com/sporkd/mise-completions-sync/issues/60)) ([78d192b](https://github.com/sporkd/mise-completions-sync/commit/78d192b8f206455b4ae681f94ec577db2ea17fdb))
+* **main:** release 0.5.2 ([#65](https://github.com/sporkd/mise-completions-sync/issues/65)) ([7085602](https://github.com/sporkd/mise-completions-sync/commit/708560249fdb1d26ac53fc81d7ce63183257ba65))
+* **main:** release 0.5.3 ([#68](https://github.com/sporkd/mise-completions-sync/issues/68)) ([f4e0b86](https://github.com/sporkd/mise-completions-sync/commit/f4e0b8625dfe1c3a6f026b463813cb7d698df5b2))
+* **main:** release 0.5.4 ([#70](https://github.com/sporkd/mise-completions-sync/issues/70)) ([47b8811](https://github.com/sporkd/mise-completions-sync/commit/47b881185d7158aac68ba24d8f36d6a74c8355a0))
+* **main:** release 0.5.5 ([#72](https://github.com/sporkd/mise-completions-sync/issues/72)) ([8c6023a](https://github.com/sporkd/mise-completions-sync/commit/8c6023ae25b3941b36e20e4f37861ae00fd7ebb0))
+* **main:** release 0.5.6 ([#74](https://github.com/sporkd/mise-completions-sync/issues/74)) ([164863a](https://github.com/sporkd/mise-completions-sync/commit/164863a559eee86b7120465fd04e189cd6c63688))
+* retrigger release-please ([278b629](https://github.com/sporkd/mise-completions-sync/commit/278b62958c0bddb564b471d95e34ce9cc23a1011))
+
+
+### Documentation Updates
+
+* clarify fish autoload choices ([2cc4ca2](https://github.com/sporkd/mise-completions-sync/commit/2cc4ca2157bed85b808184198c570a954e0c9cec))
+* fix typos and duplications in tests ([def6a25](https://github.com/sporkd/mise-completions-sync/commit/def6a25f2c32901822b71ba78ad0ce1bedcf5e31))
+* standardize README to alltuner brand structure ([#73](https://github.com/sporkd/mise-completions-sync/issues/73)) ([2057074](https://github.com/sporkd/mise-completions-sync/commit/2057074e75141b738aadb3cd323a01ef60856999))
+
+
+### CI/CD Changes
+
+* align PR title check with org canonical workflow ([#67](https://github.com/sporkd/mise-completions-sync/issues/67)) ([73a1093](https://github.com/sporkd/mise-completions-sync/commit/73a10931a2c97106d5a8471be262606a9df4d714))
+* validate PR titles as conventional commits ([#64](https://github.com/sporkd/mise-completions-sync/issues/64)) ([f27297d](https://github.com/sporkd/mise-completions-sync/commit/f27297def7e61488e24f54ea6f5814a475f43528))
+
+
+### Build System
+
+* track Cargo.lock so release builds with --locked succeed ([#69](https://github.com/sporkd/mise-completions-sync/issues/69)) ([78a9a78](https://github.com/sporkd/mise-completions-sync/commit/78a9a7852b46e707b5ae95d6d92628d0bfb52f38))
+* update pre-commit hooks and registry ([#38](https://github.com/sporkd/mise-completions-sync/issues/38)) ([c22634e](https://github.com/sporkd/mise-completions-sync/commit/c22634e65c5c68c013cf44216ec5494088c6248a))
+
+
+### Tests
+
+* add shell override precedence test ([d703df0](https://github.com/sporkd/mise-completions-sync/commit/d703df074ce3a36def1ac547746db98e19475970))
+
 ## [0.5.6](https://github.com/alltuner/mise-completions-sync/compare/v0.5.5...v0.5.6) (2026-05-04)
 
 
