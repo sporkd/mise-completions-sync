@@ -12,7 +12,19 @@ When mise installs a tool like `kubectl` or `gh`, you don't automatically get sh
 
 ## Installation
 
-### Using mise (recommended)
+### Homebrew
+
+```bash
+brew install alltuner/tap/mise-completions-sync
+```
+
+### Cargo
+
+```bash
+cargo install mise-completions-sync
+```
+
+### Using mise
 
 ```bash
 mise use -g github:alltuner/mise-completions-sync
@@ -21,12 +33,6 @@ mise use -g github:alltuner/mise-completions-sync
 ### From GitHub Releases
 
 Download the appropriate binary for your platform from the [releases page](https://github.com/alltuner/mise-completions-sync/releases).
-
-### From Source
-
-```bash
-cargo install --git https://github.com/alltuner/mise-completions-sync
-```
 
 ## Shell Setup
 
@@ -76,8 +82,8 @@ export MISE_COMPLETIONS_SYNC_BASH_DIR="$XDG_DATA_HOME/bash-completion/completion
 # ZSH completions to standard zsh location
 export MISE_COMPLETIONS_SYNC_ZSH_DIR="$XDG_DATA_HOME/zsh/site-functions"
 
-# Fish completions to standard fish locations
-export MISE_COMPLETIONS_SYNC_FISH_DIR="$XDG_CONFIG_HOME/fish/completions"
+# Fish completions to standard fish locations.
+# (pick one or the other, both are autoloaded by fish)
 export MISE_COMPLETIONS_SYNC_FISH_DIR="$XDG_DATA_HOME/fish/vendor_completions.d"
 ```
 
@@ -85,16 +91,28 @@ Note: Target directories will be created if they don't already exist. Don't forg
 
 ## Updating
 
-To update to the latest version:
+### Homebrew
+
+```bash
+brew upgrade mise-completions-sync
+```
+
+### Cargo
+
+```bash
+cargo install --force mise-completions-sync
+```
+
+### mise
 
 ```bash
 mise upgrade github:alltuner/mise-completions-sync
 ```
 
-Or to pin a specific version:
+Or pin a specific version with mise:
 
 ```bash
-mise use -g github:alltuner/mise-completions-sync@0.3.0
+mise use -g github:alltuner/mise-completions-sync@0.5.1
 ```
 
 ## Automatic Sync

@@ -1,5 +1,53 @@
 # Changelog
 
+## [0.5.6](https://github.com/alltuner/mise-completions-sync/compare/v0.5.5...v0.5.6) (2026-05-04)
+
+
+### Documentation Updates
+
+* standardize README to alltuner brand structure ([#73](https://github.com/alltuner/mise-completions-sync/issues/73)) ([2057074](https://github.com/alltuner/mise-completions-sync/commit/2057074e75141b738aadb3cd323a01ef60856999))
+
+## [0.5.5](https://github.com/alltuner/mise-completions-sync/compare/v0.5.4...v0.5.5) (2026-05-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update rust dependencies ([#71](https://github.com/alltuner/mise-completions-sync/issues/71)) ([ba67f02](https://github.com/alltuner/mise-completions-sync/commit/ba67f02946eeb1815daa8d54e6b27d2dcd9964fe))
+
+## [0.5.4](https://github.com/alltuner/mise-completions-sync/compare/v0.5.3...v0.5.4) (2026-05-03)
+
+
+### Build System
+
+* track Cargo.lock so release builds with --locked succeed ([#69](https://github.com/alltuner/mise-completions-sync/issues/69)) ([78a9a78](https://github.com/alltuner/mise-completions-sync/commit/78a9a7852b46e707b5ae95d6d92628d0bfb52f38))
+
+## [0.5.3](https://github.com/alltuner/mise-completions-sync/compare/v0.5.2...v0.5.3) (2026-05-03)
+
+
+### CI/CD Changes
+
+* align PR title check with org canonical workflow ([#67](https://github.com/alltuner/mise-completions-sync/issues/67)) ([73a1093](https://github.com/alltuner/mise-completions-sync/commit/73a10931a2c97106d5a8471be262606a9df4d714))
+
+## [0.5.2](https://github.com/alltuner/mise-completions-sync/compare/v0.5.1...v0.5.2) (2026-05-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update amannn/action-semantic-pull-request action to v6 ([#66](https://github.com/alltuner/mise-completions-sync/issues/66)) ([be5454f](https://github.com/alltuner/mise-completions-sync/commit/be5454f69cd32758b59275e990e5228b3af65c27))
+
+
+### CI/CD Changes
+
+* validate PR titles as conventional commits ([#64](https://github.com/alltuner/mise-completions-sync/issues/64)) ([f27297d](https://github.com/alltuner/mise-completions-sync/commit/f27297def7e61488e24f54ea6f5814a475f43528))
+
+## [0.5.1](https://github.com/alltuner/mise-completions-sync/compare/v0.5.0...v0.5.1) (2026-05-02)
+
+
+### Bug Fixes
+
+* bundle dependency and registry updates from recent merges ([#59](https://github.com/alltuner/mise-completions-sync/issues/59)) ([98e9409](https://github.com/alltuner/mise-completions-sync/commit/98e9409a7df5d32810ad0d41e58fb046a6926567))
+* **registry:** remove mkcert (closes [#50](https://github.com/alltuner/mise-completions-sync/issues/50)) ([#61](https://github.com/alltuner/mise-completions-sync/issues/61)) ([b588589](https://github.com/alltuner/mise-completions-sync/commit/b588589f06c413028438ec9faf367879f29c223b))
+
 ## [0.5.0](https://github.com/alltuner/mise-completions-sync/compare/v0.4.4...v0.5.0) (2026-04-01)
 
 
