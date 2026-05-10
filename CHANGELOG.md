@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.6.0](https://github.com/sporkd/mise-completions-sync/compare/v0.5.6...v0.6.0) (2026-05-10)
+
+
+### Features
+
+* add new tools ([#40](https://github.com/sporkd/mise-completions-sync/issues/40)) ([4617152](https://github.com/sporkd/mise-completions-sync/commit/461715210f3123aac1ec2471ecb334c0d232808a))
+* add prek completion support ([#48](https://github.com/sporkd/mise-completions-sync/issues/48)) ([b2bb8a9](https://github.com/sporkd/mise-completions-sync/commit/b2bb8a982e35c8bf5d08ad3cf15538fa2d9c2510)), closes [#36](https://github.com/sporkd/mise-completions-sync/issues/36)
+* add release infrastructure and expand registry ([#5](https://github.com/sporkd/mise-completions-sync/issues/5)) ([e36dd40](https://github.com/sporkd/mise-completions-sync/commit/e36dd4046be63cd8b72ed1697601907e473bda4a))
+* add worktrees directory to gitignore ([#15](https://github.com/sporkd/mise-completions-sync/issues/15)) ([c43f8ae](https://github.com/sporkd/mise-completions-sync/commit/c43f8aee52cc323ae6a75305ff13c18025a10c44))
+* **docs:** convert from mdBook to MkDocs with Material theme ([#18](https://github.com/sporkd/mise-completions-sync/issues/18)) ([1075920](https://github.com/sporkd/mise-completions-sync/commit/1075920b4285c1373a74aafcd5dafbb0fc50beb1))
+* **docs:** enhance tool documentation with metadata and status tracking ([#23](https://github.com/sporkd/mise-completions-sync/issues/23)) ([8159951](https://github.com/sporkd/mise-completions-sync/commit/81599513a5e3f689e6b52d09ed0530ecc7dd68bb))
+* initial implementation of mise-completions-sync ([818b760](https://github.com/sporkd/mise-completions-sync/commit/818b760da1cc10b19e2fe72a4b7a970988103b4b))
+* **registry:** pattern-based format with schema versioning ([#17](https://github.com/sporkd/mise-completions-sync/issues/17)) ([e7e72cc](https://github.com/sporkd/mise-completions-sync/commit/e7e72cc86fe1a6ee508dfda625156443d3b3967b))
+
+
+### Bug Fixes
+
+* bundle dependency and registry updates from recent merges ([#59](https://github.com/sporkd/mise-completions-sync/issues/59)) ([98e9409](https://github.com/sporkd/mise-completions-sync/commit/98e9409a7df5d32810ad0d41e58fb046a6926567))
+* **ci:** chain release workflows and always bump patch ([#9](https://github.com/sporkd/mise-completions-sync/issues/9)) ([415f670](https://github.com/sporkd/mise-completions-sync/commit/415f670336f716cfe30c65a3e4174d9e1c15c71d))
+* **ci:** inline build-binaries job in release-please workflow ([099ef79](https://github.com/sporkd/mise-completions-sync/commit/099ef7914c2e4ca8ad0aa3a8203075606f7a14d2))
+* **ci:** remove auto-generation of tools docs from workflow ([#28](https://github.com/sporkd/mise-completions-sync/issues/28)) ([9cdc1af](https://github.com/sporkd/mise-completions-sync/commit/9cdc1afe9a5c0fb1d0d3b6054fb9b7d131a58ae2))
+* **ci:** remove auto-generation of tools docs from workflow ([#29](https://github.com/sporkd/mise-completions-sync/issues/29)) ([25d873b](https://github.com/sporkd/mise-completions-sync/commit/25d873b7ea502e9f3cb21a0e21120b88e906060b))
+* correct hook configuration instructions ([f7ae9f7](https://github.com/sporkd/mise-completions-sync/commit/f7ae9f7fa4d3be90d4a6acf9fd2e92c5f5f16ace))
+* **deps:** update rust crate dirs to v6 ([#2](https://github.com/sporkd/mise-completions-sync/issues/2)) ([d507a8c](https://github.com/sporkd/mise-completions-sync/commit/d507a8c10d7a51d283ce841f1beca70d1d2e1780))
+* **deps:** update rust crate toml to 0.9 ([#1](https://github.com/sporkd/mise-completions-sync/issues/1)) ([612da68](https://github.com/sporkd/mise-completions-sync/commit/612da6830ce19d9d04fcf0cb3c4f139ca21a5113))
+* **deps:** update rust crate toml to v1 ([#35](https://github.com/sporkd/mise-completions-sync/issues/35)) ([ea3241f](https://github.com/sporkd/mise-completions-sync/commit/ea3241fa003e8c5a60b0c70d07e22cb9f9de8239))
+* **docs:** trigger rebuild on CHANGELOG changes and include in site ([#24](https://github.com/sporkd/mise-completions-sync/issues/24)) ([d1a5bd1](https://github.com/sporkd/mise-completions-sync/commit/d1a5bd1695f9a2d44b8e151475051b9df4918086))
+* **generate-registry:** migrate from mise registry.toml to API endpoint ([#42](https://github.com/sporkd/mise-completions-sync/issues/42)) ([329a9b9](https://github.com/sporkd/mise-completions-sync/commit/329a9b97754df3e264ea9d47ce11bbe21a02406e))
+* **registry:** remove mkcert (closes [#50](https://github.com/sporkd/mise-completions-sync/issues/50)) ([#61](https://github.com/sporkd/mise-completions-sync/issues/61)) ([b588589](https://github.com/sporkd/mise-completions-sync/commit/b588589f06c413028438ec9faf367879f29c223b))
+* **registry:** remove tools without completion support ([#14](https://github.com/sporkd/mise-completions-sync/issues/14)) ([7f3a0b5](https://github.com/sporkd/mise-completions-sync/commit/7f3a0b57bc084eebac2bba345bcaa892965c1165))
+* **registry:** remove tools without completion support ([#21](https://github.com/sporkd/mise-completions-sync/issues/21)) ([4d5e7ba](https://github.com/sporkd/mise-completions-sync/commit/4d5e7ba585cd80b0b70eabc4890909999318295d))
+* remove gcloud from registry ([#32](https://github.com/sporkd/mise-completions-sync/issues/32)) ([#33](https://github.com/sporkd/mise-completions-sync/issues/33)) ([fa296f6](https://github.com/sporkd/mise-completions-sync/commit/fa296f69e5812a0e83c081ec7431d02282681662))
+* remove unused json import in generate-registry ([#47](https://github.com/sporkd/mise-completions-sync/issues/47)) ([d3e7c29](https://github.com/sporkd/mise-completions-sync/commit/d3e7c29a63751b203108bfa12884156ff5a03b5d))
+* **scripts:** handle missing mise in CI gracefully ([#26](https://github.com/sporkd/mise-completions-sync/issues/26)) ([70651da](https://github.com/sporkd/mise-completions-sync/commit/70651daf251e6248f6ff58812fb21f0dcd7c451c))
+* **tests:** use Mutex for test serialization instead of --test-threads=1 ([2952746](https://github.com/sporkd/mise-completions-sync/commit/2952746430d0b3eb8e4f4421d6a1d9de85ef78a9))
+* wrap completion commands with mise x for tool availability ([#12](https://github.com/sporkd/mise-completions-sync/issues/12)) ([32f58c5](https://github.com/sporkd/mise-completions-sync/commit/32f58c509744f7e91c4c805c6e69caf322418616))
+
 ## [0.5.6](https://github.com/alltuner/mise-completions-sync/compare/v0.5.5...v0.5.6) (2026-05-04)
 
 
