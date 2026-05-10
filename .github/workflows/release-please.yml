@@ -25,6 +25,37 @@ jobs:
   build-binaries:
     needs: release-please
     if: needs.release-please.outputs.release_created == 'true'
-    uses: ./.github/workflows/release.yml
-    with:
-      tag: ${{ needs.release-please.outputs.tag_name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: aarch64-apple-darwin
+            os: macos-latest
+          - target: x86_64-apple-darwin
+            os: macos-latest
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-latest
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.release-please.outputs.tag_name }}
+
+      - uses: houseabsolute/actions-rust-cross@v1.0.7
+        with:
+          target: ${{ matrix.target }}
+          args: --release --locked
+          strip: true
+
+      - name: Create archive
+        run: |
+          cd target/${{ matrix.target }}/release
+          tar -czvf ../../../mise-completions-sync-${{ matrix.target }}.tar.gz mise-completions-sync
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ needs.release-please.outputs.tag_name }}
+          files: mise-completions-sync-${{ matrix.target }}.tar.gz
