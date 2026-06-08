@@ -159,6 +159,26 @@ misecompsync dir zsh
 misecompsync clean
 ```
 
+### Additional Flags
+
+By default, completions are synced for every installed tool. You can narrow the set with
+the following scope flags that `mise ls` accepts — they're passed straight through:
+
+```bash
+# Only tools in global mise config files
+misecompsync --global   # or -g
+
+# Only tools in local (project) mise config files
+misecompsync --local    # or -l
+
+# Only tools currently in mise config files (not just with `mise install`)
+misecompsync --current  # or -c
+```
+
+* `--global` and `--local` are mutually exclusive (same as `mise ls`)
+* Scope flags also apply to `clean` (e.g. `misecompsync --global clean`)
+* Scope flags don't work with explicit tool args (e.g. `misecompsync --local ripgrep` is invalid)
+
 ## License
 
 MIT
